@@ -11,7 +11,9 @@ $ tar -xf v5.2.3.tar.bz2 --strip 1  --exclude='*.md'
 ```
 docker build --rm -t samtools .       
 ```
-
+- `--rm` removes intermediate steps
+- `-t` tags the image - e.g. samtools
+-  `.` look for the file Dockerfile in the current directory 
 
 
 # Run the image:
