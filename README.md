@@ -2,7 +2,7 @@
 # Prepare input data
 
 ```
-$ wget https://bitbucket.org/snakemake/snakemake-tutorial/get/v5.2.3.tar.bz2
+$ curl -O https://bitbucket.org/snakemake/snakemake-tutorial/get/v5.2.3.tar.bz2
 $ tar -xf v5.2.3.tar.bz2 --strip 1  --exclude='*.md'  
 ```
 
