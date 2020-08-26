@@ -1,4 +1,15 @@
 
+# Install docker
+
+https://www.docker.com/products/docker-desktop
+
+# Clone this the repository in a working folder on your computer
+
+```
+$ git clone https://github.com/cfmitrea/docker-tutorial.git
+
+```
+
 # Prepare input data
 
 ```
