@@ -6,15 +6,16 @@ https://www.docker.com/products/docker-desktop
 # Clone this the repository in a working folder on your computer
 
 ```
-$ git clone https://github.com/cfmitrea/docker-tutorial.git
+git clone https://github.com/cfmitrea/docker-tutorial.git
+cd docker_tutorial
 
 ```
 
 # Prepare input data
 
 ```
-$ curl -O https://bitbucket.org/snakemake/snakemake-tutorial/get/v5.2.3.tar.bz2
-$ tar -xf v5.2.3.tar.bz2 --strip 1  --exclude='*.md'  
+curl -O https://bitbucket.org/snakemake/snakemake-tutorial/get/v5.2.3.tar.bz2
+tar -xf v5.2.3.tar.bz2 --strip 1  --exclude='*.md'  
 ```
 
 
@@ -31,7 +32,7 @@ docker build --rm -t samtools .
 
 ```
 
-$ docker run -v $(pwd)/data:/data/ -e "INPUT_FILE=A" --rm samtools:latest bash /opt/run.sh
+docker run -v $(pwd)/data:/data/ -e "INPUT_FILE=A" --rm samtools:latest bash /opt/run.sh
 ```
 
  - `-v` mounts the folder data in the working directory into folder ``/data`` inside the docker container. The changes from within the container will be available after the container stops. 
@@ -42,7 +43,7 @@ $ docker run -v $(pwd)/data:/data/ -e "INPUT_FILE=A" --rm samtools:latest bash /
 
 
 ```
-$ docker run -v $(pwd)/data:/data/ -v $(pwd)/run.sh:/opt/run.sh -e "INPUT_FILE=A" --rm -it samtools:latest /bin/bash
+docker run -v $(pwd)/data:/data/ -v $(pwd)/run.sh:/opt/run.sh -e "INPUT_FILE=A" --rm -it samtools:latest /bin/bash
 ```
 
  - `-it` enable interacitve mode - in combination with the command /bin/bash starts the bash terminal and waits for commands inside the container
