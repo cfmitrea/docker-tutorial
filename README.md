@@ -31,7 +31,6 @@ docker build --rm -t samtools .
 # Run the image:
 
 ```
-
 docker run -v "$(pwd)"/data:/data/ -e "INPUT_FILE=A" --rm samtools:latest bash /opt/run.sh
 ```
 
@@ -40,7 +39,7 @@ docker run -v "$(pwd)"/data:/data/ -e "INPUT_FILE=A" --rm samtools:latest bash /
  - `--rm` removes the container instance after it finishes. Alternative: use ``--name`` for container identification and remove the container using ``docker rm -v <name>`` after completion
 
 This will start and run the container, running the run.sh script on the container.
-It will create the mapped_reads folder on the container and the A.bam file under that.
+It will create the mapped_reads folder on the container and the A.bam file in that folder. A BAM (Binary Alignment/Map) file is the compressed, binary version of a SAM (Sequence Alignment Map) file, used to store nucleotide sequence alignments against a reference genome.
 
 # Debugging / interactive mode
 
